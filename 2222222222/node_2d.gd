@@ -1,22 +1,18 @@
-extends CharacterBody2D
+extends Node2D
 
-@export var move_speed := 100.0  # 이동 속도 (픽셀/초)
-@export var move_distance := 300.0  # 총 이동 거리
-@export var rotation_speed := 180.0  # 회전 속도 (도/초)
+@onready var anim = $AnimationPlayer
+@onready var label = $Label
 
-var direction := 1
-var start_position := Vector2.ZERO
+#func _ready():
+	# 애니메이션 생성
+	#var animation = Animation.new()
+	#animation.length = 20.0  # 크레딧이 올라가는 시간 (초)
+	
+#func _process(delta):
+#	if $Label != null and $Label.position.y > -1000:
+#		$Label.position.y -= 0.5
 
-func _ready():
-	start_position = global_position
-
-func _process(delta):
-	# 위치 업데이트
-	global_position.x += direction * move_speed * delta
-
-	# 회전
-	rotation_degrees += rotation_speed * delta
-
-	# 끝에 도달하면 방향 반전
-	if abs(global_position.x - start_position.x) > move_distance:
-		direction *= -1
+	
+	# 애니메이션 등록 및 재생
+	#anim.add_animation("scroll_up", animation)
+	#anim.play("scroll_up")

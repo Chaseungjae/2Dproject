@@ -180,6 +180,8 @@ func _physics_process(delta):
 				SLIDE_Y = 2.5
 			apply_shake()
 			velocity.y = (JUMP_FORCE * 0.5) * SLIDE_Y
+			if not $AudioStreamPlayer2D.playing:
+				$AudioStreamPlayer2D.play()
 			is_jumping = true
 			can_jump = false
 			is_sliding = true
@@ -227,3 +229,9 @@ func _physics_process(delta):
 # 에어리어 충돌 시
 func _on_area_2d_2_area_entered(area: Area2D) -> void:
 	pass
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		get_tree().change_scene_to_file("res://node_2d333.tscn")
+		#게임 종료 구현하면 끝 + 앞쪽에 조작법이랑 게임 시작 버튼

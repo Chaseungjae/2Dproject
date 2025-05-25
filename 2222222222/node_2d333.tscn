@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1tcbe0vhegsq"]
+
+[ext_resource type="Script" uid="uid://coalxyv148yox" path="res://node_2d.gd" id="1_d82po"]
+[ext_resource type="Texture2D" uid="uid://bj88sejrqppgr" path="res://Aset/map/BackGround/thumb-Bimg_20160816013117_mdmsgrfq.jpg" id="2_jxs68"]
+[ext_resource type="Script" uid="uid://dxtn8vvu88l02" path="res://label.gd" id="3_jxs68"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_d82po")
+
+[node name="Thumb-bimg20160816013117Mdmsgrfq" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(690.75, 533.25)
+scale = Vector2(1.73063, 1.7825)
+texture = ExtResource("2_jxs68")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 78.0
+offset_top = 926.0
+offset_right = 1447.0
+offset_bottom = 2000.0
+text = "제작자 : 차승재
+기획 : 차승재
+프로그래머 : 차승재
+도와준사람 : 김민규, 박성현, ChatGPT
+참고한게임 : jumpking, smilemo
+출처:
+효과음 : https://www.mewpot.com/search/song
+BGM : https://youtu.be/0mIi_TuIxUE?si=7SM4E97K6DjagTPe
+IMG : 
+https://bdragon1727.itch.io/pixel-tilemap-platformer
+https://atari-boy.itch.io/snow-platform-pack
+
+
+플레이 해주셔서 감사합니다"
+horizontal_alignment = 1
+script = ExtResource("3_jxs68")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Label")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(748, 549)
+zoom = Vector2(1.64, 1.64)

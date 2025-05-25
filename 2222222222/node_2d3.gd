@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var move_distance := 200.0  # 총 이동 거리
 @export var rotation_speed := 180.0  # 회전 속도 (도/초)
 
-var direction := 1
+var direction := -1
 var start_position := Vector2.ZERO
 
 func _ready():
