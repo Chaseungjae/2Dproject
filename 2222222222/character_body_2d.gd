@@ -49,6 +49,9 @@ var jump_camera_offset := Vector2(0, 100)
 var fall_camera_offset := Vector2(0, -30)
 var camera_lerp_speed := 5.0
 var camera_target_offset := Vector2.ZERO
+var maxcamera = 20
+var mincamera = -40
+var cacamemerara = 0
 
 func _ready():
 	default_camera_offset = camera.position
@@ -138,6 +141,8 @@ func _physics_process(delta):
 
 	# 점프 해제 시 점프 시작
 	if Input.is_action_just_released("jump") and can_jump:
+		if not $AudioStreamPlayer2D2.playing:
+				$AudioStreamPlayer2D2.play()
 		velocity.y = applied_jump_force
 		var jump_multiplier = abs(applied_jump_force) / abs(JUMP_FORCE)
 		velocity.x = jump_direction.x * SPEED * JUMP_ANGLE * jump_multiplier
@@ -152,9 +157,13 @@ func _physics_process(delta):
 
 	# 카메라 이동
 	if Input.is_action_pressed("ui_up"):
-		camera.position.y -= 10
+		if cacamemerara < maxcamera:
+			camera.position.y -= 10
+			cacamemerara+= 1
 	if Input.is_action_pressed("ui_down"):
-		camera.position.y += 10
+		if cacamemerara > mincamera:
+			camera.position.y += 10
+			cacamemerara-= 1
 		
 		
 	

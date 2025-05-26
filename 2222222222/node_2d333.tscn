@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1tcbe0vhegsq"]
+[gd_scene load_steps=5 format=3 uid="uid://c1tcbe0vhegsq"]
 
-[ext_resource type="Script" uid="uid://coalxyv148yox" path="res://node_2d.gd" id="1_d82po"]
+[ext_resource type="FontFile" uid="uid://cpd7eigjdol5i" path="res://CookieRun Bold.otf" id="2_hch1g"]
 [ext_resource type="Texture2D" uid="uid://bj88sejrqppgr" path="res://Aset/map/BackGround/thumb-Bimg_20160816013117_mdmsgrfq.jpg" id="2_jxs68"]
+[ext_resource type="AudioStream" uid="uid://ofmwpplx6uqo" path="res://111.mp3" id="3_hch1g"]
 [ext_resource type="Script" uid="uid://dxtn8vvu88l02" path="res://label.gd" id="3_jxs68"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_d82po")
 
 [node name="Thumb-bimg20160816013117Mdmsgrfq" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -16,23 +16,50 @@ texture = ExtResource("2_jxs68")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 78.0
-offset_top = 926.0
+offset_top = 1089.0
 offset_right = 1447.0
-offset_bottom = 2000.0
-text = "제작자 : 차승재
-기획 : 차승재
-프로그래머 : 차승재
-도와준사람 : 김민규, 박성현, ChatGPT
-참고한게임 : jumpking, smilemo
-출처:
-효과음 : https://www.mewpot.com/search/song
-BGM : https://youtu.be/0mIi_TuIxUE?si=7SM4E97K6DjagTPe
-IMG : 
+offset_bottom = 2412.0
+theme_override_fonts/font = ExtResource("2_hch1g")
+theme_override_font_sizes/font_size = 22
+text = "제작자:
+차승재
+
+기획:
+차승재
+
+프로그래머:
+차승재
+
+개발 플랫폼:
+Gogot
+
+도와준사람:
+박성현	ChatGPT
+
+참고한게임:
+jumpking	smilemo
+
+참고자료:
+ChatGPT
+Youtube
+
+각종 출처:
+https://www.mewpot.com/search/song	
+https://youtu.be/0mIi_TuIxUE?si=7SM4E97K6DjagTPe
 https://bdragon1727.itch.io/pixel-tilemap-platformer
 https://atari-boy.itch.io/snow-platform-pack
+https://www.youtube.com/watch?v=uOHI2d7c6uw
+https://www.mewpot.com/search/sound-effects?
+font : CookieRun
 
+제작시간:
+대충 100시간
 
-플레이 해주셔서 감사합니다"
+개발자한마디:
+레벨디자인이 너무 귀찮아요
+
+플레이 해주셔서 감사합니다
+Thank you for playing!"
 horizontal_alignment = 1
 script = ExtResource("3_jxs68")
 
@@ -42,3 +69,7 @@ root_node = NodePath("../Label")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(748, 549)
 zoom = Vector2(1.64, 1.64)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hch1g")
+autoplay = true
