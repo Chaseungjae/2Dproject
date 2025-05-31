@@ -16,9 +16,9 @@ texture = ExtResource("2_jxs68")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 78.0
-offset_top = 1089.0
+offset_top = 1094.0
 offset_right = 1447.0
-offset_bottom = 2412.0
+offset_bottom = 2417.0
 theme_override_fonts/font = ExtResource("2_hch1g")
 theme_override_font_sizes/font_size = 22
 text = "제작자:
@@ -31,7 +31,7 @@ text = "제작자:
 차승재
 
 개발 플랫폼:
-Gogot
+Godot
 
 도와준사람:
 박성현	ChatGPT
@@ -60,6 +60,17 @@ font : CookieRun
 
 플레이 해주셔서 감사합니다
 Thank you for playing!"
+horizontal_alignment = 1
+autowrap_mode = 3
+script = ExtResource("3_jxs68")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 74.0
+offset_top = 995.0
+offset_right = 1443.0
+offset_bottom = 2372.0
+theme_override_fonts/font = ExtResource("2_hch1g")
+theme_override_font_sizes/font_size = 22
 horizontal_alignment = 1
 script = ExtResource("3_jxs68")
 
