@@ -5474,7 +5474,6 @@ position = Vector2(523, -111)
 metadata/_edit_lock_ = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["danger"]]
-position = Vector2(64862, 898)
 script = ExtResource("3_4c57u")
 metadata/_edit_group_ = true
 
