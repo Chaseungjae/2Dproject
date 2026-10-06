@@ -2,7 +2,9 @@
 
 점프 버튼을 **누르고 있는 시간만큼 높이와 거리가 결정되는** 홀드 점프와, 벽에 부딪혀 튕겨 나오는 **반사 물리**가 핵심인 야간 테마 2D 플랫포머입니다. 혼자 기획부터 구현까지 진행했습니다.
 
-▶ **플레이 영상**: https://youtu.be/_SWh5Mbt__I
+▶ **플레이 영상 (최종 버전)**: https://youtu.be/_SWh5Mbt__I
+
+**개발 진행 영상**: [테스트1](https://youtu.be/5HOB3qfvNPw) · [테스트2](https://youtu.be/xXPSwqnCJmU) · [테스트3](https://youtu.be/KLdIe_S0fk8) · [테스트4](https://youtu.be/HHei7UyeDaU) · [테스트5](https://youtu.be/vJznu5Tf8iw) · [테스트6](https://youtu.be/_SWh5Mbt__I)
 
 | | |
 |---|---|
