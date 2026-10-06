@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://x5c2dcbbomwm"
+path="res://.godot/imported/MP_Mario Jumping.mp3-34514040a54ad6d7c8babdaee6e893c7.mp3str"
+
+[deps]
+
+source_file="res://MP_Mario Jumping.mp3"
+dest_files=["res://.godot/imported/MP_Mario Jumping.mp3-34514040a54ad6d7c8babdaee6e893c7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

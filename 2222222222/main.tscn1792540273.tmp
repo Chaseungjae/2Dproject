@@ -1,0 +1,119 @@
+[gd_scene load_steps=14 format=3 uid="uid://b8duvjn8kb0sd"]
+
+[ext_resource type="Texture2D" uid="uid://md5phbffrkcw" path="res://Aset/map/cbee9d32dc49a3799e0f9fd4e3a13165.jpg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cg760x53droyv" path="res://character_body_2d.gd" id="3_4c57u"]
+[ext_resource type="Texture2D" uid="uid://dyq1m6ew4ncnp" path="res://Aset/char/char1.png" id="3_kek77"]
+[ext_resource type="Texture2D" uid="uid://bg38jqrwjehks" path="res://Aset/char/char2.png" id="5_efxa6"]
+[ext_resource type="Texture2D" uid="uid://cdjf3m0nf0h06" path="res://Aset/char/char3.png" id="6_dg77c"]
+[ext_resource type="Texture2D" uid="uid://bqyut4uw2xukd" path="res://Aset/char/char4.png" id="7_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://c6u6whyysv2hg" path="res://Aset/char/char5.png" id="8_w48qg"]
+[ext_resource type="Texture2D" uid="uid://bayi2y4o7rhp6" path="res://Aset/map/KakaoTalk_20250402_161549633.jpg" id="9_kek77"]
+[ext_resource type="Texture2D" uid="uid://6hyghaebjj6l" path="res://Aset/char/char6.png" id="9_vivmo"]
+
+[sub_resource type="GDScript" id="GDScript_5vw27"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2cqfq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_efxa6")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dg77c")
+}],
+"loop": false,
+"name": &"Jump1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ycdy4")
+}],
+"loop": false,
+"name": &"Jump2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_w48qg")
+}],
+"loop": false,
+"name": &"Jump3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_vivmo")
+}],
+"loop": false,
+"name": &"Jump4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kek77")
+}],
+"loop": false,
+"name": &"Waiting",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
+size = Vector2(44, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efxa6"]
+size = Vector2(167.5, 108.5)
+
+[node name="Main" type="Node2D"]
+script = SubResource("GDScript_5vw27")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(575, 329)
+scale = Vector2(1.56318, 1.18207)
+texture = ExtResource("1_ig7tw")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(559, 241)
+script = ExtResource("3_4c57u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(-133, 205)
+sprite_frames = SubResource("SpriteFrames_2cqfq")
+animation = &"Jump3"
+autoplay = "Waiting"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-133, 243)
+shape = SubResource("RectangleShape2D_4c57u")
+
+[node name="발판" type="StaticBody2D" parent="."]
+position = Vector2(941, 651)
+
+[node name="KakaoTalk20250402161549633" type="Sprite2D" parent="발판"]
+position = Vector2(-521, -57.9999)
+scale = Vector2(0.202899, 0.134896)
+texture = ExtResource("9_kek77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="발판"]
+position = Vector2(-521.75, -58.25)
+shape = SubResource("RectangleShape2D_efxa6")
+
+[node name="발판2" type="StaticBody2D" parent="."]
+position = Vector2(1113, 617)
+
+[node name="KakaoTalk20250402161549633" type="Sprite2D" parent="발판2"]
+position = Vector2(-521, -57.9999)
+scale = Vector2(0.202899, 0.134896)
+texture = ExtResource("9_kek77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="발판2"]
+position = Vector2(-521.75, -58.25)
+shape = SubResource("RectangleShape2D_efxa6")
